@@ -74,4 +74,33 @@ export class AppComponent {
   onSelected(currency) {
     console.log(currency);
   }
+
+  refresh() {
+    this.countires = [
+      {
+        id: 1,
+        name: 'Afgan',
+        code: 'AZ'
+      },
+      {
+        id: 2,
+        name: 'Bolchad',
+        code: 'BD'
+      },
+      {
+        id: 3,
+        name: 'Azerbaijhan',
+        code: 'ABJ'
+      },
+      {
+        id: 4,
+        name: 'Kenya',
+        code: 'KN'
+      },
+    ];
+  }
+
+  trackByCountries(index: number, country: ICountries): number {
+    return country.id;
+  }
 }

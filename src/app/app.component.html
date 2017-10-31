@@ -17,6 +17,7 @@
 </div>
 <div>
   <ul class="players-list">
-    <li *ngFor="let country of countires; let i = index;"> ({{i+1}}) {{country.name}}</li>
+    <li *ngFor="let country of countires; let i = index; trackBy:trackByCountries"> ({{i+1}}) {{country.name}}</li>
   </ul>
+  <button (click)="refresh()">Refresh</button>
 </div>
