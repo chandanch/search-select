@@ -17,6 +17,6 @@
 </div>
 <div>
   <ul class="players-list">
-    <li></li>
+    <li *ngFor="let country of countires; let i = index;"> ({{i+1}}) {{country.name}}</li>
   </ul>
 </div>

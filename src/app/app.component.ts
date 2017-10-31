@@ -50,6 +50,25 @@ export class AppComponent {
         country: 'Botswana'
       },
     ];
+
+    // For countries
+    this.countires = [
+      {
+        id: 1,
+        name: 'Afgan',
+        code: 'AZ'
+      },
+      {
+        id: 2,
+        name: 'Bolchad',
+        code: 'BD'
+      },
+      {
+        id: 3,
+        name: 'Azerbaijhan',
+        code: 'ABJ'
+      },
+    ];
   }
 
   onSelected(currency) {
