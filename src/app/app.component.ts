@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IOption} from 'ng-select';
 import {ICurrency} from './currency.model';
 import {ICountries} from './models/countries.model';
+declare var $;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Search Select';
   // data for select options
   myOptions: Array<ICurrency>;
@@ -20,6 +21,10 @@ export class AppComponent {
   constructor() {
       this.optionsPlaceholder = 'Select currency';
       this.loadData();
+  }
+
+  ngOnInit() {
+    // $('#exampleModal').modal('hide').remove();
   }
 
   loadData() {
@@ -102,5 +107,10 @@ export class AppComponent {
 
   trackByCountries(index: number, country: ICountries): number {
     return country.id;
+  }
+
+  closeModal() {
+    console.log(`Closing modal`);
+    $('#exampleModal').modal('hide');
   }
 }
